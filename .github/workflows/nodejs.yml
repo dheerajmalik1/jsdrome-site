@@ -27,10 +27,12 @@ jobs:
     - name: Test
       run:
         npm test
+        npm run test:codecov
         npm run test:browserstack
         npm run test:cypress:run
       env:
         CI: true
         BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER }}
         BROWSERSTACK_TOKEN: ${{ secrets.BROWSERSTACK_TOKEN }}
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }} 
         CYPRESS_TOKEN: ${{ secrets.CYPRESS_TOKEN }} 
