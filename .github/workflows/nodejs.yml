@@ -27,4 +27,4 @@ jobs:
       env:
         CI: true
         BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER }}
-        BROWSERSTACK_TOKEN: ${{ secrets.BROWSERSTACK_TOKEN }}:  
+        BROWSERSTACK_TOKEN: ${{ secrets.BROWSERSTACK_TOKEN }}
