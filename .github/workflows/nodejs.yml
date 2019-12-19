@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -17,15 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install
+    - name: Install, Build, Test
       run:
         npm ci
-    - name: Build
-      run:
         npm run build:client:prod
         npm run build:server:prod
-    - name: Test
-      run:
         npm test
         npm run test:codecov
         npm run test:browserstack
