@@ -26,3 +26,5 @@ jobs:
         npm run test:browserstack
       env:
         CI: true
+        BROWSERSTACK_USER: ${{ secrets.BROWSERSTACK_USER }}
+        BROWSERSTACK_TOKEN: ${{ secrets.BROWSERSTACK_TOKEN }}:  
